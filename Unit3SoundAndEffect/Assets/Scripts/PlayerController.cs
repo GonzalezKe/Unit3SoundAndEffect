@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public bool gameOver = false;
     public bool doubleJumpUsed = false;
+    public bool doubleSpeed = false;
     public float doubleJumpForce;
 
     // Start is called before the first frame update
@@ -47,6 +48,17 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
             playerAnim.Play("Running_Jump", 3, 0f);
             playerAudio.PlayOneShot(jumpSound, 1.0f);
+        }
+
+         if(Input.GetKey(KeyCode.LeftShift))
+        {
+            doubleSpeed = true;
+            playerAnim.SetFloat("Speed_Multiplier", 2.0f);
+        }
+         else if (doubleSpeed)
+        {
+            doubleSpeed = false;
+            playerAnim.SetFloat("Speed_Multiplier", 1.0f);
         }
     }
 
