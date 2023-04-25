@@ -2246,7 +2246,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: DeathType_int
-    m_EventTreshold: 2
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110261697}
   m_Solo: 0
@@ -8260,7 +8260,7 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110261697}
-    m_Position: {x: -72, y: 180, z: 0}
+    m_Position: {x: -70, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110204794}
     m_Position: {x: 168, y: 180, z: 0}
